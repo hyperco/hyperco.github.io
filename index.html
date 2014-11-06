@@ -1,53 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
   <title>Hypercontextualization Co.</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="jumbotron">
-    <h1>Hypercontextualization Co.</h1>
-    <p></p>
-    </div>
+<div class="container">
 
-<div class="col-md-8">
+<div class="jumbotron">
+  <h1>Hypercontextualization Co.</h1>
+</div>
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="http://i.imgur.com/jclg08i.png" alt="Hacker News" style="width: 100%;">
+<div class="row">
+  <div class="col-md-8">
+  
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="http://i.imgur.com/jclg08i.png" alt="Hacker News" style="width: 100%;">
+      </div>
+      <div class="item">
+        <img src="http://i.imgur.com/PERy6B3.png" alt="Snow White Wikipedia" style="width: 100%;">
+      </div>
     </div>
-    <div class="item">
-      <img src="http://i.imgur.com/PERy6B3.png" alt="Snow White Wikipedia" style="width: 100%;">
+  
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>  
+  <div class="col-md-4">
+    <div class="well">
+      <h2>Rule34Everywhere</h2>
+      <p>Rule34Everywhere is a Greasemonkey script for enriching your web browsing experience.
+      Whenever you visit a website that references a tag in
+      <a href="http://rule34.paheal.net/">Paheal's Rule34 Database</a> a small icon and link is added to directly to the page.
+      On mouseover it will display a random image with that tag, and clicking will link you directly to its gallery.
+      </p>
+      <a href="https://github.com/hyperco/Rule34Everywhere" role="button" class="btn btn-primary btn-large">Download</a>
+    </div>  
+  </div>
+</div>
+
+  <h2>Rule #34 &mdash; If it exists there IS porn of it.</h2>
+  <p class="lead">Have you ever been browsing the internet and thought to yourself,
+  &ldquo;I really wish this boring page had more porn on it&rdquo;? If so, look no further,
+  Rule34Everywhere is the solution for you. It simply adds subtle links to the pages YOU visit,
+  providing you with simple and easy access to relevant rule 34 content.</p>
+  
+  <div class="row text-center">
+    <div class="col-md-4">
+      <h3>Fast</h3>
+      <p>The algorithm Rule34Everywhere uses is only <em>O(<var>n</var> log <var>m</var>)</em> where <var>n</var>
+      is the number of words on the page and <var>m</var> is the number of tags in Paheal's database. As all
+      computer scientists know &ldquot;if it ain't exponential, it ain't slow&rdquot;, so you are sure to have a
+      smooth experience browsing with Rule34Everywhere. </p>
+    </div>
+    <div class="col-md-4">
+      <h3>Private</h3>
+      <p>Rule34Everywhere caches Paheal's tag database locally and only makes requests to paheal when the dog image
+      is hovered over. When images are fetched like this, no refererer is sent so paheal cannot see your browsing.
+      Note that when the link is clicked though, the referer is sent.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Discreet</h3>
+      <p>Rule34Everywhere is inheriently SFW until one of the indicator icons is hovered over. Noone is likely to
+      notice the small dog icons showing up every once and a while on your browser, and even if they do, few could
+      identify it as the favicon for the rule34 database.</p>
     </div>
   </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
-</div>
-<div class="col-md-4">
-<div class="well">
-  <h2>Rule34Everywhere</h2>
-  <p>Rule34Everywhere is a Greasemonkey script for enriching your web browsing experience.
-  Whenever you visit a website that references a tag in
-  <a href="http://rule34.paheal.net/">Paheal's Rule34 Database</a> a small icon and link is added to directly to the page.
-  On mouseover it will display a random image with that tag, and clicking will link you directly to the gallery for that tag.
-  </p>
-  <a href="https://github.com/hyperco/Rule34Everywhere" role="button" class="btn btn-primary btn-large">Download</a>
-</div>  
-</div>
-  </div>
 </body>
 </html>
