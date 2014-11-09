@@ -57,7 +57,7 @@
       On mouseover it will display a random image with that tag, and clicking will link you directly to its gallery.
 	  </p>
 	  <div class="btn-group btn-group-lg btn-group-justified">
-		<a href="https://github.com/hyperco/Rule34Everywhere/raw/master/Rule34Everywhere.user.js" role="button" class="btn btn-primary">Install</a>
+		<a href="https://github.com/hyperco/Rule34Everywhere/raw/master/Rule34Everywhere.user.js" role="button" class="btn btn-primary install">Install</a>
 		<a href="https://github.com/hyperco/Rule34Everywhere" role="button" class="btn btn-default">Code</a>
 	  </div>
 	  <p style="margin-top: 0.5em; margin-bottom: 0em;"><small><em><a href="http://www.greasespot.net/">Greasemonkey</a> (for Firefox) or <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Tampermonkey</a> (for Chrome) must be installed to use Rule34Everywhere.</em></small></p>
@@ -70,7 +70,7 @@
   <p class="lead">Have you ever been browsing the internet and thought to yourself,
   &ldquo;Man, this boring page could really use some porn on it&rdquo;? If so, look no further,
   Rule34Everywhere is the solution for you.</p>
-  <a href="https://github.com/hyperco/Rule34Everywhere/raw/master/Rule34Everywhere.user.js" role="button" class="btn btn-primary btn-lg">Install</a>
+  <a href="https://github.com/hyperco/Rule34Everywhere/raw/master/Rule34Everywhere.user.js" role="button" class="btn btn-primary btn-lg install">Install</a>
 
 </div>
   
@@ -128,7 +128,7 @@
 	</div>
   </div>
 <footer class="text-center" style="margin-top: 1.5em; padding-top: 1.5em; margin-bottom: 3em; border-top: 1px solid #ddd;">
-<em>	<a href="https://github.com/hyperco/Rule34Everywhere/raw/master/Rule34Everywhere.user.js">Install</a> &bull;
+<em>	<a href="https://github.com/hyperco/Rule34Everywhere/raw/master/Rule34Everywhere.user.js" class="install">Install</a> &bull;
 
 	<a href="https://github.com/hyperco">Github</a> &bull; <a href="mailto:about@hyco.me">Contact</a></em>
 </footer>
@@ -142,6 +142,24 @@
 
   ga('create', 'UA-56480709-1', 'auto');
   ga('send', 'pageview');
+  
+/**
+* Function that tracks a click on an outbound link in Google Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label.
+*/
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+     function () {
+     document.location = url;
+     }
+   });
+}
+
+$(".install").click(function(el) {
+	trackOutboundLink($(this).attr("href"));
+	return false;
+});
 </script>
 </body>
 </html>
